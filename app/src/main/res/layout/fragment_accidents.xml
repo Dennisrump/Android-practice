@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.DashboardFragment">
+    tools:context=".view.AccidentsFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/dashboard_fragment" />
+        android:text="@string/accidents_fragment" />
 
 </FrameLayout>
