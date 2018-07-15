@@ -1,5 +1,6 @@
 package com.example.rump.p2000reader.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -18,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         replaceFragment(new DashboardFragment());
         navigationListener();
+
     }
 
     private void navigationListener() {
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.bottom_main_navigation);
+        final Intent intent = new Intent(this, MapsFragment.class);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_main_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         replaceFragment(new AccidentsFragment());
                         break;
                     case R.id.navigation_map:
+                        replaceFragment(new MapsFragment());
                         break;
                 }
                 return true;
