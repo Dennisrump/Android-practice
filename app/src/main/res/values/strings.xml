@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">P2000Reader</string>
+    <string name="accidents">Accidents</string>
+    <string name="map">Map</string>
+    <string name="dashboard">Dashboard</string>
+
+    <string name="dashboard_fragment">Dashboard fragment</string>
+    <string name="accidents_fragment">Accidents Fragment</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
