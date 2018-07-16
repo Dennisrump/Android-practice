@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rump.p2000reader.R;
+import com.example.rump.p2000reader.helpers.CheckPermission;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -21,6 +22,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
     MapView mMapView;
     private GoogleMap googleMap;
+    public final static int TAG_PERMISSION_CODE=1;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -44,7 +46,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
             public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
 
-                //googleMap.setMyLocationEnabled(true);
+                if(!CheckPermission.checkPermission(getActivity())) {
+                    CheckPermission.requestPermission(getActivity(),TAG_PERMISSION_CODE);
+                } else {
+                    googleMap.setMyLocationEnabled(true);
+                }
+
 
                 LatLng sydney = new LatLng(-34, 151);
                 googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
