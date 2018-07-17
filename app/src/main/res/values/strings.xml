@@ -7,4 +7,11 @@
     <string name="dashboard_fragment">Dashboard fragment</string>
     <string name="accidents_fragment">Accidents Fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="permission_explaination">GPS permission is needed to see your own location on the map. Enable the location permission the app settings.</string>
+    <string name="title_activity_welcome_acitivity">WelcomeAcitivity</string>
+    <string name="enable_location">Enable location</string>
+    <string name="welcome_to_the_p2000_reader">
+        Welcome to the p2000 reader!\n\nGPS permission is needed to see your own location on the map\n\nYou can also choose to skip this step, however you will not be able to see your own location on the map.
+    </string>
+    <string name="skip">Skip</string>
 </resources>

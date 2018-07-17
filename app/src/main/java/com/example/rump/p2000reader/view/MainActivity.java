@@ -11,14 +11,12 @@ import com.example.rump.p2000reader.R;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         replaceFragment(new DashboardFragment());
         navigationListener();
-
     }
 
     private void navigationListener() {
