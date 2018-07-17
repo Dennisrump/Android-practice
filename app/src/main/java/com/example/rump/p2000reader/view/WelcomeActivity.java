@@ -58,6 +58,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void startMainActivity() {
         Intent MainActivityIntent = new Intent(this, MainActivity.class);
+        MainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(MainActivityIntent);
     }
 }

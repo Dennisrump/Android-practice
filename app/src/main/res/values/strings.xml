@@ -10,4 +10,9 @@
     <string name="permission_explaination">GPS permission is needed to see your own location on the map. Enable the location permission the app settings.</string>
     <string name="title_activity_welcome_acitivity">WelcomeAcitivity</string>
     <string name="enable_location">Enable location</string>
+    <string name="welcome_to_the_p2000_reader">
+        Welcome to the p2000 reader!\n\n
+        GPS permission is needed to see your own location on the map\n\n
+        You can also choose to skip this step, however you will not be able to see your own location on the map.
+    </string>
 </resources>
