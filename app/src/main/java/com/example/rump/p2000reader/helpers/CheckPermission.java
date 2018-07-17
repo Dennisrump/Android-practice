@@ -19,7 +19,6 @@ public class CheckPermission {
 
     //REQUEST FOR PERMISSSION
     public static void requestPermission(Activity activity, final int code){
-
         if (ActivityCompat.shouldShowRequestPermissionRationale(activity,Manifest.permission.ACCESS_FINE_LOCATION)){
             Toast.makeText(activity, R.string.permission_explaination,Toast.LENGTH_LONG).show();
         } else {
