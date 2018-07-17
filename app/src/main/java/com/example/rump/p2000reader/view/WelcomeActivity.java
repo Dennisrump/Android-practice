@@ -17,13 +17,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
-        locationButtonListener();
-
         if (CheckPermission.checkPermission(WelcomeActivity.this)) {
             startMainActivity();
         }
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
+        locationButtonListener();
+        skipLocationStep();
     }
 
     private void locationButtonListener() {
@@ -33,6 +33,15 @@ public class WelcomeActivity extends AppCompatActivity {
                 if (!CheckPermission.checkPermission(WelcomeActivity.this)) {
                     CheckPermission.requestPermission(WelcomeActivity.this, TAG_PERMISSION_CODE);
                 }
+            }
+        });
+    }
+
+    private void skipLocationStep() {
+        findViewById(R.id.skipText).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startMainActivity();
             }
         });
     }
