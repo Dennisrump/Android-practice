@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view;
+package com.example.rump.p2000reader.view.Maps;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

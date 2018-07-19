@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view;
+package com.example.rump.p2000reader.view.Dashboard;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.rump.p2000reader.R;
+import com.example.rump.p2000reader.view.Accidents.AccidentsFragment;
+import com.example.rump.p2000reader.view.Maps.MapsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view;
+package com.example.rump.p2000reader.view.Dashboard;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;

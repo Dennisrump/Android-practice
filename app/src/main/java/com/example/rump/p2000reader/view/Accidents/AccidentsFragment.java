@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view;
+package com.example.rump.p2000reader.view.Accidents;
 
 
 import android.os.Bundle;
@@ -24,7 +24,7 @@ public class AccidentsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_accidents, container, false);
+        return inflater.inflate(R.layout.content_accident, container, false);
     }
 
 }
