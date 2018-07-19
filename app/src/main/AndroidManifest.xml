@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Dashboard.WelcomeActivity">
+        <activity android:name=".view.dashboard.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +28,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".view.Dashboard.MainActivity"></activity>
+        <activity android:name=".view.dashboard.MainActivity"></activity>
     </application>
 
 </manifest>

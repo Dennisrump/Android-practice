@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view.Accidents;
+package com.example.rump.p2000reader.view.accidents;
 
 
 import android.os.Bundle;
@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 
 import com.example.rump.p2000reader.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class AccidentsFragment extends Fragment {
 
     public AccidentsFragment() {

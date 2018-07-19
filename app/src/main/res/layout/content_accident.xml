@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/places_container"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".view.Dashboard.MainActivity">
+    tools:context=".view.dashboard.MainActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

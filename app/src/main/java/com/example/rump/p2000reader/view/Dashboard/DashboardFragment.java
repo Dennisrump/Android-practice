@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view.Dashboard;
+package com.example.rump.p2000reader.view.dashboard;
 
 
 import android.os.Bundle;

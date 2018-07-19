@@ -1,4 +1,4 @@
-package com.example.rump.p2000reader.view.Dashboard;
+package com.example.rump.p2000reader.view.dashboard;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,6 +13,7 @@ import com.example.rump.p2000reader.helpers.CheckPermission;
 
 
 public class WelcomeActivity extends AppCompatActivity {
+
     public final static int TAG_PERMISSION_CODE = 1;
 
     @Override
