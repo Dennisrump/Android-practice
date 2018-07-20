@@ -17,7 +17,7 @@
             android:padding="6dp">
 
             <ImageView
-                android:id="@+id/img_place"
+                android:id="@+id/img_accident"
                 android:layout_width="86dp"
                 android:layout_height="130dp"
                 android:layout_alignParentEnd="true"
@@ -28,7 +28,7 @@
                 android:contentDescription="TODO" />
 
             <TextView
-                android:id="@+id/txt_name"
+                android:id="@+id/txt_title"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
@@ -40,21 +40,21 @@
                 />
 
             <TextView
-                android:id="@+id/txt_address"
+                android:id="@+id/txt_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/txt_name"
-                android:layout_below="@+id/txt_name"
+                android:layout_alignStart="@+id/txt_title"
+                android:layout_below="@+id/txt_title"
                 android:layout_marginTop="2dp"
                 android:text="@string/placeholder"
                 />
 
             <TextView
-                android:id="@+id/txt_distance"
+                android:id="@+id/txt_pubDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/txt_address"
-                android:layout_below="@+id/txt_address"
+                android:layout_alignStart="@+id/txt_description"
+                android:layout_below="@+id/txt_description"
                 android:layout_marginTop="2dp"
                 android:text="@string/placeholder"
                 />
