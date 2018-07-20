@@ -3,7 +3,6 @@ package com.example.rump.p2000reader.view.accidents;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +15,8 @@ import com.example.rump.p2000reader.R;
 import com.example.rump.p2000reader.model.Accident;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class AccidentsFragment extends Fragment {
 
@@ -31,10 +32,11 @@ public class AccidentsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         accidents = new ArrayList<>();
-        Accident accident = new Accident("test","Test","dads",44.00F, 44.00F);
+        Date currentTime = Calendar.getInstance().getTime();
+        Accident accident = new Accident("test", "Test", "dads",  currentTime,44.00F, 44.00F);
         accidents.add(accident);
         View rootView = inflater.inflate(R.layout.content_accident, container, false);
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         // 3. create an adapter
@@ -46,7 +48,6 @@ public class AccidentsFragment extends Fragment {
 
         return rootView;
     }
-
 
 
 }

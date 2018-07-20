@@ -11,10 +11,14 @@ public class Accident {
     private Float longitude;
     private Float latitude;
 
-    public Accident(String title, String description, String link, Float longitude, Float latitude) {
+    public Accident() {
+    }
+
+    public Accident(String title, String description, String link, Date pubDate, Float longitude, Float latitude) {
         this.title = title;
         this.description = description;
         this.link = link;
+        this.pubDate = pubDate;
         this.longitude = longitude;
         this.latitude = latitude;
     }

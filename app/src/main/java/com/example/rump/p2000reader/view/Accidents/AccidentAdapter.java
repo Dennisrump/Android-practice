@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.example.rump.p2000reader.R;
 import com.example.rump.p2000reader.model.Accident;
 
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class AccidentAdapter extends RecyclerView.Adapter<AccidentAdapter.Accide
 
     private List<Accident> mAccidents;
 
-    public AccidentAdapter(List<Accident> mAccidents) {
+    AccidentAdapter(List<Accident> mAccidents) {
         this.mAccidents = mAccidents;
     }
 
@@ -31,8 +30,10 @@ public class AccidentAdapter extends RecyclerView.Adapter<AccidentAdapter.Accide
 
     @Override
     public void onBindViewHolder(@NonNull AccidentViewHolder holder, int position) {
-        TextView titleText = holder.titleTextView;
-        titleText.setText("Test");
+        Accident accident = mAccidents.get(position);
+        holder.titleTextView.setText(accident.getTitle());
+        holder.descriptionTextView.setText(accident.getDescription());
+        holder.pubDateTextView.setText(accident.getPubDate().toString());
     }
 
 
@@ -41,11 +42,9 @@ public class AccidentAdapter extends RecyclerView.Adapter<AccidentAdapter.Accide
         return mAccidents.size();
     }
 
-    public class AccidentViewHolder extends RecyclerView.ViewHolder {
+    class AccidentViewHolder extends RecyclerView.ViewHolder {
 
-        TextView titleTextView;
-        TextView descriptionTextView;
-        TextView pubDateTextView;
+        TextView titleTextView, descriptionTextView, pubDateTextView;
 
         AccidentViewHolder(@NonNull View itemView) {
             super(itemView);
