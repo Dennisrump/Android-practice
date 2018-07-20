@@ -7,12 +7,18 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rump.p2000reader.R;
-import com.example.rump.p2000reader.model.Accident;
+import com.example.rump.p2000reader.model.accident.Accident;
+import com.example.rump.p2000reader.model.AccidentType;
+import com.example.rump.p2000reader.model.accident.AccidentLoadedEvent;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -31,7 +37,7 @@ public class AccidentsFragment extends Fragment {
         // Inflate the layout for this fragment
         ArrayList<Accident> accidents = new ArrayList<>();
         Date currentTime = Calendar.getInstance().getTime();
-        Accident accident = new Accident("test", "Test", "dads",  currentTime,44.00F, 44.00F);
+        Accident accident = new Accident("test", "Test", "dads", currentTime,44.00F, 44.00F, AccidentType.Ambulance);
         accidents.add(accident);
         View rootView = inflater.inflate(R.layout.content_accident, container, false);
         RecyclerView recyclerView = rootView.findViewById(R.id.recyclerView);
@@ -47,5 +53,31 @@ public class AccidentsFragment extends Fragment {
         return rootView;
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onAccidentLoadedEvent(AccidentLoadedEvent event) {
+        for (Accident accident : event.accidentList) {
+            Log.d("Test", accident.getTitle());
+        }
+    }
 
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
 }

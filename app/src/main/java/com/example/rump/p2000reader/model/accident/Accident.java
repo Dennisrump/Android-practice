@@ -1,4 +1,6 @@
-package com.example.rump.p2000reader.model;
+package com.example.rump.p2000reader.model.accident;
+
+import com.example.rump.p2000reader.model.AccidentType;
 
 import java.util.Date;
 

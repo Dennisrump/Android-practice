@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.rump.p2000reader.R;
-import com.example.rump.p2000reader.model.Accident;
+import com.example.rump.p2000reader.model.accident.Accident;
 
 
 import java.util.List;
