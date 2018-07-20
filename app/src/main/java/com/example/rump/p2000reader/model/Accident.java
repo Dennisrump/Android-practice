@@ -10,17 +10,19 @@ public class Accident {
     private Date pubDate;
     private Float longitude;
     private Float latitude;
+    private AccidentType accidentType;
 
     public Accident() {
     }
 
-    public Accident(String title, String description, String link, Date pubDate, Float longitude, Float latitude) {
+    public Accident(String title, String description, String link, Date pubDate, Float longitude, Float latitude, AccidentType accidentType) {
         this.title = title;
         this.description = description;
         this.link = link;
         this.pubDate = pubDate;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.accidentType = accidentType;
     }
 
     public String getTitle() {
@@ -69,5 +71,13 @@ public class Accident {
 
     public void setLatitude(Float latitude) {
         this.latitude = latitude;
+    }
+
+    public AccidentType getAccidentType() {
+        return accidentType;
+    }
+
+    public void setAccidentType(AccidentType accidentType) {
+        this.accidentType = accidentType;
     }
 }

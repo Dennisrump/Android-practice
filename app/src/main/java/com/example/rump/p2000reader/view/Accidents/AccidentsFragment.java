@@ -20,8 +20,6 @@ import java.util.Date;
 
 public class AccidentsFragment extends Fragment {
 
-    ArrayList<Accident> accidents;
-
     public AccidentsFragment() {
         // Required empty public constructor
     }
@@ -31,7 +29,7 @@ public class AccidentsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        accidents = new ArrayList<>();
+        ArrayList<Accident> accidents = new ArrayList<>();
         Date currentTime = Calendar.getInstance().getTime();
         Accident accident = new Accident("test", "Test", "dads",  currentTime,44.00F, 44.00F);
         accidents.add(accident);
